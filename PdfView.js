@@ -126,13 +126,13 @@ export default class PdfView extends Component {
 
     componentDidUpdate(prevProps) {
 
-        if (this.props.scale !== this.state.scale) {
-            this._onScaleChanged({
-                scale: this.props.scale / this.state.scale,
-                pageX: this.state.contentContainerSize.width / 2,
-                pageY: this.state.contentContainerSize.height / 2
-            });
-        }
+        // if (this.props.scale !== this.state.scale) {
+        //     this._onScaleChanged({
+        //         scale: this.props.scale / this.state.scale,
+        //         pageX: this.state.contentContainerSize.width / 2,
+        //         pageY: this.state.contentContainerSize.height / 2
+        //     });
+        // }
 
         if (this.props.horizontal !== prevProps.horizontal || this.props.page !== prevProps.page) {
             let page = (this.props.page) < 1 ? 1 : this.props.page;
